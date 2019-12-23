@@ -24,7 +24,9 @@
 
 ### Segments of the prompt, default order declaration
 
-typeset -aHg AGNOSTER_PROMPT_SEGMENTS=(
+
+# fix from https://github.com/agnoster/agnoster-zsh-theme/issues/95
+AGNOSTER_PROMPT_SEGMENTS=(
     prompt_status
     prompt_context
     prompt_virtualenv
@@ -32,6 +34,8 @@ typeset -aHg AGNOSTER_PROMPT_SEGMENTS=(
     prompt_git
     prompt_end
 )
+
+typeset -aHg AGNOSTER_PROMPT_SEGMENTS
 
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
